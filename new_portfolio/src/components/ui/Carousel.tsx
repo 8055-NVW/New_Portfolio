@@ -1,18 +1,15 @@
-'use client'
-import Slider from 'react-slick'
-import { type FC } from 'react'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+"use client";
+import Slider from "react-slick";
+import { type FC } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+import { Project } from "@/types/Project";
 
-type Project = {
-  pic: string
-  title: string
-  name?: string
-}
 
 type CarouselProps = {
-  projects: Project[]
-}
+  projects: Project[];
+};
 
 const Carousel: FC<CarouselProps> = ({ projects }) => {
   const settings = {
@@ -32,17 +29,17 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
         settings: {
           slidesToShow: 2,
           centerMode: true,
-        }
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerMode: false, 
-        }
-      }
-    ]
-  }
+          centerMode: false,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="relative z-20 w-full max-w-7xl overflow-hidden pt-6 pb-16 px-6 sm:px-6">
@@ -50,14 +47,21 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
         <Slider {...settings}>
           {projects.map((item, index) => (
             <div key={index} className="px-2">
-              <div className="w-full h-[500px] bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-xl overflow-hidden transition-transform hover:scale-[1.02] sm:max-w-[420px] sm:mx-auto">
-                <img
-                  src={item.pic}
-                  alt={item.title}
-                  className="w-full h-[410px] object-cover bg-black"
-                />
-                <div className="px-4 py-4 text-center">
-                  <h3 className="text-white text-lg font-semibold">{item.title}</h3>
+              <div className="flex flex-col bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-2xl sm:max-w-[420px] sm:mx-auto">
+                <div className="w-full aspect-[4/5] relative">
+                  <Image
+                    src={item.pic}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover rounded-t-2xl"
+                    priority={index === 0}
+                  />
+                </div>
+                <div className="flex flex-col justify-center items-center px-4 py-3 text-center">
+                  <h3 className="text-white text-base font-semibold sm:text-lg">
+                    {item.title}
+                  </h3>
                   {item.name && (
                     <p className="text-slate-400 text-sm mt-1">{item.name}</p>
                   )}
@@ -68,7 +72,7 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
         </Slider>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

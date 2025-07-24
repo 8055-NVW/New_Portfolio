@@ -3,6 +3,7 @@ import { useState, RefObject, FormEvent, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Image from "next/image";
 
 type FooterProps = {
   contactRef: RefObject<HTMLElement | null>;
@@ -23,7 +24,6 @@ export default function Footer({ contactRef }: FooterProps) {
   if (!mounted) return null;
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
 
     const data = {
       service_id: serviceId,
@@ -46,7 +46,8 @@ export default function Footer({ contactRef }: FooterProps) {
         position: "top-center",
         autoClose: 3000,
       });
-    } catch (error) {
+    } catch (e) {
+      console.log(e);
       toast.error("Failed to send the email. Please try again.", {
         position: "top-center",
         autoClose: 3000,
@@ -59,20 +60,22 @@ export default function Footer({ contactRef }: FooterProps) {
       ref={contactRef}
       className="bg-[#00000036]/35 backdrop-blur-md text-primary-content"
     >
-
       <div className="max-w-7xl mx-auto px-5 md:px-14 py-12 flex flex-col lg:flex-row items-center justify-between gap-10">
         <div className="flex flex-col items-center text-slate-100 text-center md:items-center md:text-center w-full md:w-1/2 lg:w-[40%]">
-          <p className="text-4xl font-bold text-slate-50 pb-5">Let's Connect</p>
+          <p className="text-4xl font-bold text-slate-50 pb-5">
+            Let&apos;s Connect
+          </p>
           <div className="flex gap-6">
             <a
               href={`mailto:${myEmail}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src="/assets/email-white.svg"
                 alt="email"
-                className="h-[40px]"
+                width={40}
+                height={40}
               />
             </a>
             <a
@@ -80,10 +83,11 @@ export default function Footer({ contactRef }: FooterProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src="/assets/linkedin-white.svg"
                 alt="linkedin"
-                className="h-[40px]"
+                width={40}
+                height={40}
               />
             </a>
             <a
@@ -91,10 +95,11 @@ export default function Footer({ contactRef }: FooterProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
+              <Image
                 src="/assets/github-white.svg"
                 alt="github"
-                className="h-[40px]"
+                width={40}
+                height={40}
               />
             </a>
           </div>

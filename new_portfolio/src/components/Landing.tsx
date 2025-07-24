@@ -47,7 +47,7 @@ export default function Landing({ landingRef }: LandingProps) {
           >
             Hi!
             <br />
-            I'm Vivian
+            I&apos;m Vivian
           </h1>
           <h2
             id="subtitle"

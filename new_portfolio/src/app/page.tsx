@@ -10,11 +10,11 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const landingRef = useRef<HTMLElement | null>(null);
+  const landingRef = useRef<HTMLDivElement | null>(null);
   const aboutRef = useRef<HTMLDivElement>(null!); 
-  const skillsRef = useRef<HTMLElement | null>(null);
-  const projectsRef = useRef<HTMLElement | null>(null);
-  const expRef = useRef<HTMLElement | null>(null);
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const expRef = useRef<HTMLDivElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
   return (
