@@ -25,7 +25,7 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
     slidesToShow: 3,
     slidesToScroll: 1,
     pauseOnHover: true,
-    arrows: false,
+    arrows: true,
     dots: true,
     responsive: [
       {
@@ -39,15 +39,15 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerMode: false, // Disable centering for full-width slide
+          centerMode: false, 
         }
       }
     ]
   }
 
   return (
-    <div className="relative z-20 w-full overflow-hidden pt-6 pb-16 px-4 sm:px-6">
-      <div className="relative w-full">
+    <div className="relative z-20 w-full max-w-7xl overflow-hidden pt-6 pb-16 px-6 sm:px-6">
+      <div className="relative w-full ">
         <Slider {...settings}>
           {projects.map((item, index) => (
             <div key={index} className="px-2">

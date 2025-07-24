@@ -17,13 +17,25 @@ export default function Landing({ landingRef }: LandingProps) {
     characters.forEach((char) => {
       char.classList.add('translate-y-full');
     });
-
+    
     gsap.to('.char', {
       y: 0,
       stagger: 0.07,
       delay: 0.05,
       duration: 0.7,
     });
+
+    gsap.fromTo(
+      '#subtitle',
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1.2,
+        duration: 0.8,
+        ease: 'power2.out',
+      }
+    );
   }, []);
 
   return (
@@ -32,13 +44,16 @@ export default function Landing({ landingRef }: LandingProps) {
         <div className="mx-5 px-5 w-full">
           <h1
             id="text"
-            className="playwrite-nz-400 landing-text text-5xl md:text-6xl font-bold text-center text-white"
+            className="landing-text text-5xl md:text-6xl font-bold text-center text-white"
           >
             Hi!
             <br />
             I'm Vivian
           </h1>
-          <h2 className="text-4xl hidden md:hidden lg:block text-center text-slate-100 pt-5">
+          <h2
+            id="subtitle"
+            className="text-4xl hidden md:hidden lg:block text-center text-slate-100 pt-5 opacity-0"
+          >
             Full Stack Software Developer
           </h2>
         </div>
@@ -53,7 +68,10 @@ export default function Landing({ landingRef }: LandingProps) {
               />
             </div>
           </div>
-          <h2 className="text-4xl text-center font-light lg:hidden text-slate-100 pt-10">
+          <h2
+            id="subtitle"
+            className="text-4xl text-center font-light lg:hidden text-slate-100 pt-10 opacity-0"
+          >
             Full Stack Software Developer
           </h2>
         </div>

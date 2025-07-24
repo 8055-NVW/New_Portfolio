@@ -17,7 +17,7 @@ export default function Projects({ projectsRef }: ProjectsProps) {
   return (
     <div
       ref={projectsRef}
-      className="h-full bg-black flex flex-col items-center pb-10"
+      className="h-full bg-black flex flex-col items-center pb-10 "
     >
       <h1 className="page-title text-4xl font-bold m-3 mb-[1.5em] pt-14 text-center text-slate-100">
         Projects

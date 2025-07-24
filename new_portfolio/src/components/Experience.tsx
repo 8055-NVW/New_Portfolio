@@ -1,5 +1,4 @@
 "use client";
-
 import { RefObject } from "react";
 import Slider from "react-slick";
 import "@/app/globals.css"; // includes slick styles and your dot overrides
@@ -38,7 +37,7 @@ export default function Experience({ expRef }: ExperienceProps) {
       <h1 className="page-title text-4xl my-4 font-bold text-center text-slate-50">
         Experience
       </h1>
-      <div className="w-full max-w-[95vw] md:max-w-[90vw] px-2">
+      <div className="w-full max-w-7xl px-6 mx-auto">
         <Slider {...settings}>
           {/* Card 1 */}
           <div className="px-4">

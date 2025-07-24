@@ -27,7 +27,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <div
-      className="w-full max-w-4xl mx-auto my-12 rounded-3xl bg-slate-900/60 backdrop-blur-md border border-white/10 shadow-[0_4px_40px_rgba(0,0,0,0.4)] p-6 md:p-10 transition-all duration-300"
+      className="w-full max-w-6xl mx-auto my-12 rounded-3xl bg-slate-900/60 backdrop-blur-md border border-white/10 shadow-[0_4px_40px_rgba(0,0,0,0.4)] p-6 md:p-10 transition-all duration-300"
       data-aos="fade-up"
       data-aos-duration="500"
     >
