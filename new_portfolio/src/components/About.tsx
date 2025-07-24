@@ -2,7 +2,6 @@
 import { useEffect, useState, RefObject } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Carousel from "./ui/Carousel";
-import { Project } from "@/types/Project";
 import { projects } from "@/data/projects";
 
 type AboutProps = {

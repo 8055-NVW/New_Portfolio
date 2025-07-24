@@ -6,7 +6,6 @@ import { RiHome9Line } from "react-icons/ri";
 type NavbarProps = {
   landingRef: RefObject<HTMLElement | null>;
   aboutRef: RefObject<HTMLElement | null>;
-  skillsRef: RefObject<HTMLDivElement | null>;
   projectsRef: RefObject<HTMLElement | null>;
   expRef: RefObject<HTMLElement | null>;
   contactRef: RefObject<HTMLElement | null>;
@@ -40,7 +39,7 @@ export default function Navbar({
     };
   }, [prevScrollPos]);
 
-  const handleClick = (ref: RefObject<HTMLElement>) => {
+  const handleClick = (ref: RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 

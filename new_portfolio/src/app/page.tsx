@@ -24,7 +24,6 @@ export default function Home() {
       <Navbar
         landingRef={landingRef}
         aboutRef={aboutRef}
-        skillsRef={skillsRef}
         projectsRef={projectsRef}
         expRef={expRef}
         contactRef={contactRef}
