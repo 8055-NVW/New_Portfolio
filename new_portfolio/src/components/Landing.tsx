@@ -1,5 +1,4 @@
 'use client';
-
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
@@ -7,7 +6,7 @@ import Image from 'next/image';
 import type { RefObject } from 'react';
 
 type LandingProps = {
-  landingRef: RefObject<HTMLElement | null>;
+  landingRef: RefObject<HTMLDivElement | null>;
 };
 
 export default function Landing({ landingRef }: LandingProps) {
@@ -17,7 +16,7 @@ export default function Landing({ landingRef }: LandingProps) {
     characters.forEach((char) => {
       char.classList.add('translate-y-full');
     });
-    
+
     gsap.to('.char', {
       y: 0,
       stagger: 0.07,
@@ -59,12 +58,14 @@ export default function Landing({ landingRef }: LandingProps) {
         </div>
         <div className="px-5 py-10 w-full flex flex-col justify-center items-center lg:border-l-4 border-white lg:-translate-x-[21px]">
           <div className="avatar">
-            <div className="w-[17rem] rounded-3xl overflow-hidden">
+            <div className="relative w-64 h-64 rounded-3xl overflow-hidden">
               <Image
                 src="/assets/me.jpg"
-                alt="A mug shot of me"
-                width={272}
-                height={340}
+                alt="Portrait of Vivian"
+                fill
+                priority
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 256px"
+                className="object-cover"
               />
             </div>
           </div>

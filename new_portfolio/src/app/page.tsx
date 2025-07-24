@@ -19,6 +19,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen relative z-0 ">
+
       <BackgroundAnimation />
       <Navbar
         landingRef={landingRef}

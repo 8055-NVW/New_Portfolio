@@ -1,5 +1,4 @@
 'use client'
-
 import Slider from 'react-slick'
 import { type FC } from 'react'
 import 'slick-carousel/slick/slick.css'

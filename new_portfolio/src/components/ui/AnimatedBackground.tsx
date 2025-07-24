@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/utils/cn";
 import { useEffect, useRef, useState } from "react";
 
@@ -165,7 +164,6 @@ export const BackgroundAnimation = ({
             `opacity-100`
           )}
         ></div>
-
         {interactive && (
           <div
             ref={interactiveRef}

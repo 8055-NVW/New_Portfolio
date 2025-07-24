@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { ProjectCard } from "./custom/ProjectCard";
 
 type ProjectsProps = {
-  projectsRef: RefObject<HTMLElement | null>;
+  projectsRef: RefObject<HTMLDivElement | null>;
 };
 
 export default function Projects({ projectsRef }: ProjectsProps) {

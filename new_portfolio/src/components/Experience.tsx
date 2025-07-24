@@ -1,10 +1,10 @@
 "use client";
 import { RefObject } from "react";
 import Slider from "react-slick";
-import "@/app/globals.css"; // includes slick styles and your dot overrides
+import "@/app/globals.css";
 
 type ExperienceProps = {
-  expRef: RefObject<HTMLElement | null>;
+  expRef: RefObject<HTMLDivElement | null>
 };
 
 export default function Experience({ expRef }: ExperienceProps) {
@@ -33,7 +33,10 @@ export default function Experience({ expRef }: ExperienceProps) {
   };
 
   return (
-    <div ref={expRef} className="flex flex-col items-center justify-center py-14 w-full overflow-x-hidden">
+    <div
+      ref={expRef}
+      className="flex flex-col items-center justify-center py-14 w-full overflow-x-hidden"
+    >
       <h1 className="page-title text-4xl my-4 font-bold text-center text-slate-50">
         Experience
       </h1>
@@ -42,28 +45,43 @@ export default function Experience({ expRef }: ExperienceProps) {
           {/* Card 1 */}
           <div className="px-4">
             <div className="p-8 bg-[#000000ab] shadow-md rounded-2xl max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold">Software Engineering Immersive Graduate</h3>
-              <h4 className="text-xl font-semibold text-gray-300">General Assembly, London</h4>
+              <h3 className="text-2xl font-bold">
+                Software Engineering Immersive Graduate
+              </h3>
+              <h4 className="text-xl font-semibold text-gray-300">
+                General Assembly, London
+              </h4>
               <h5 className="text-base font-medium text-gray-400 border-b-2 mb-2">
                 MARCH 2024 - JUNE 2024
               </h5>
               <p className="text-slate-50 text-md">
-                Completed a 12-week full-stack bootcamp using React, Node.js, Django REST, and more. Key projects:
+                Completed a 12-week full-stack bootcamp using React, Node.js,
+                Django REST, and more. Key projects:
               </p>
               <ul className="list-disc pl-5 text-slate-50 text-sm mt-2">
-                <li><strong>Frogger</strong> – JS arcade game clone</li>
-                <li><strong>Movie Gallery</strong> – React & Node movie browser</li>
-                <li><strong>Pedal</strong> – MERN-based social app</li>
-                <li><strong>BlendBay</strong> – Full-stack shake app (Django + React)</li>
+                <li>
+                  <strong>Frogger</strong> – JS arcade game clone
+                </li>
+                <li>
+                  <strong>Movie Gallery</strong> – React & Node movie browser
+                </li>
+                <li>
+                  <strong>Pedal</strong> – MERN-based social app
+                </li>
+                <li>
+                  <strong>BlendBay</strong> – Full-stack shake app (Django +
+                  React)
+                </li>
               </ul>
             </div>
           </div>
-
           {/* Card 2 */}
           <div className="px-4">
             <div className="p-8 bg-[#000000ab] shadow-md rounded-2xl max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold">Refrigeration Case Cleaner</h3>
-              <h4 className="text-xl font-semibold text-gray-300">Arcus FM, Stevenage</h4>
+              <h4 className="text-xl font-semibold text-gray-300">
+                Arcus FM, Stevenage
+              </h4>
               <h5 className="text-base font-medium text-gray-400 border-b-2 mb-2">
                 JULY 2022 - FEB 2024
               </h5>
@@ -73,12 +91,13 @@ export default function Experience({ expRef }: ExperienceProps) {
               </ul>
             </div>
           </div>
-
           {/* Card 3 */}
           <div className="px-4">
             <div className="p-8 bg-[#000000ab] shadow-md rounded-2xl max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold">Outbound Sales Consultant</h3>
-              <h4 className="text-xl font-semibold text-gray-300">OneFamily, Swindon</h4>
+              <h4 className="text-xl font-semibold text-gray-300">
+                OneFamily, Swindon
+              </h4>
               <h5 className="text-base font-medium text-gray-400 border-b-2 mb-2">
                 OCT 2021 - JUN 2022
               </h5>
@@ -88,12 +107,13 @@ export default function Experience({ expRef }: ExperienceProps) {
               </ul>
             </div>
           </div>
-
           {/* Card 4 */}
           <div className="px-4">
             <div className="p-8 bg-[#000000ab] shadow-md rounded-2xl max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold">Case Maintenance Engineer</h3>
-              <h4 className="text-xl font-semibold text-gray-300">Space Engineering, Bristol</h4>
+              <h4 className="text-xl font-semibold text-gray-300">
+                Space Engineering, Bristol
+              </h4>
               <h5 className="text-base font-medium text-gray-400 border-b-2 mb-2">
                 FEB 2019 - SEP 2021
               </h5>
@@ -103,7 +123,6 @@ export default function Experience({ expRef }: ExperienceProps) {
               </ul>
             </div>
           </div>
-
           {/* Card 5 */}
           <div className="px-4">
             <div className="p-8 bg-[#000000ab] shadow-md rounded-2xl max-w-2xl mx-auto">
