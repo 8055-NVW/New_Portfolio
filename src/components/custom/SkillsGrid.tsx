@@ -26,15 +26,18 @@ export default function SkillsGrid({ title, skills }: SkillsGridProps) {
           <span className="w-2 h-2 rounded-full bg-yellow-400" /> Learning
         </div>
       </div>
-      <div className="bg-[#000000ab] backdrop-blur-xl m-5 md:m-10 justify-center rounded-xl p-6 grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 sm:gap-6">
+      <div className="bg-[#000000ab] backdrop-blur-xl m-5 md:m-10 rounded-xl p-6 flex flex-wrap justify-center gap-4 sm:gap-6">
         {skills.map((skill, index) => (
-          <CardContainer key={index} className="card-container">
+          <CardContainer
+            key={index}
+            className="card-container flex-shrink-0 flex-grow-0 basis-full sm:basis-[48%] max-w-[300px] w-full"
+          >
             <CardBody className="relative dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] rounded-xl p-4 md:p-6">
               <CardItem
                 translateZ="400"
                 className="w-full flex flex-col items-center"
               >
-                <div className="relative w-[50px] h-[50px]">
+                <div className="relative min-w-[75px] min-h-[75px]">
                   <Image
                     src={skill.icon}
                     alt={skill.name}
