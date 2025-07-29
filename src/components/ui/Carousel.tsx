@@ -15,7 +15,7 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
   const settings = {
     infinite: true,
     centerMode: true,
-    speed: 2000,
+
     autoplay: false,
 
     slidesToShow: 3,
