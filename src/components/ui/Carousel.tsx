@@ -19,7 +19,7 @@ const Carousel: FC<CarouselProps> = ({ projects }) => {
     autoplay: true,
     autoplaySpeed: 3000,
     slidesToShow: 3,
-    slidesToScroll: 1,
+
     pauseOnHover: true,
     arrows: true,
     dots: true,
